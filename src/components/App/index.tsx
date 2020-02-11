@@ -1,24 +1,22 @@
+import { makeStyles } from "@material-ui/core/styles"
 import React from "react"
-import logo from "../../assets/logo.svg"
 import "./styles.css"
+import { HEIGHT } from "../../utils/height"
+import { WIDTH } from "../../utils/width"
+import { Login } from "../Login"
+
+const useStyles = makeStyles(() => ({
+  root: {
+    height: HEIGHT,
+    width: WIDTH,
+  },
+}))
 
 export function App() {
+  const classes = useStyles()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <Login />
     </div>
   )
 }
