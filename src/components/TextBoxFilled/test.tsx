@@ -5,11 +5,11 @@ import { TextBoxFilled } from "."
 describe("TextBoxFilled", () => {
   it("name prop is rendered", () => {
     // Arrange
-    const name = "TextBoxFilled"
+    const name = "Email"
 
     // Act
-    const { getByText } = render(<TextBoxFilled label="Email" />)
-    const received = getByText(name)
+    const textBox = render(<TextBoxFilled label={name} />)
+    const received = textBox
 
     // Assert
     expect(received).toBeDefined()

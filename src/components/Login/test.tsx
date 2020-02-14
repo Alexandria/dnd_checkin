@@ -5,13 +5,11 @@ import { Login } from "."
 describe("Login", () => {
   it("name prop is rendered", () => {
     // Arrange
-    const name = "Login"
 
     // Act
-    const { getByText } = render(<Login />)
-    const received = getByText(name)
+    const login = render(<Login />)
 
     // Assert
-    expect(received).toBeDefined()
+    expect(login).toBeDefined()
   })
 })

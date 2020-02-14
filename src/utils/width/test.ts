@@ -3,7 +3,7 @@ import { WIDTH } from "."
 describe("width", () => {
   it("works", () => {
     // Arrange
-    const valA = window.screen.width
+    const valA = window.innerWidth
 
     // Act
     const received = WIDTH
